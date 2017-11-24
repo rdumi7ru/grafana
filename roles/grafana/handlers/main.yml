@@ -1,0 +1,5 @@
+--- # Handlers file for grafana
+- name: restart firewalld
+  service:
+    name: firewalld
+    state: restarted

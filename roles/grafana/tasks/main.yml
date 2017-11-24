@@ -1,0 +1,12 @@
+--- # Tasks for grafana
+- name: Install grafana
+  package:
+    name: "{{ grafana_pkg}}"
+    state: present
+
+- name: Start grafana
+  systemd:
+    name: grafana-server
+    state: started
+    daemon_reload: yes
+    enabled: yes
